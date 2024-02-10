@@ -1,5 +1,8 @@
 import discord
 from discord import app_commands
+from dotenv import load_dotenv
+import os
+load_dotenv()
 #import interaction
 
 
@@ -15,7 +18,7 @@ tree = app_commands.CommandTree(client)
 async def on_ready():
   print('We have logged in as {0.user}'.format(client))
 
-client.run('MTIwNTY3ODc1MDMxNDc5NTAyOQ.Gu7QgF.BuXr1309EkZV6M6Pmx0Wo7cq1Irz3gnwq8zvSc')
+client.run(os.getenv("TOKEN"))
 
 
 
